@@ -18,25 +18,42 @@
             android:id="@+id/mainIconBuilding"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            tools:srcCompat="@drawable/building" />
-
-        <TextView
-            android:id="@+id/mainTxtViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_weight="0"
+            tools:srcCompat="@drawable/portrait" />
 
         <LinearLayout
-            android:layout_width="204dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal"></LinearLayout>
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/mainBtnConfiguration"
-            android:layout_width="64dp"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/mainTxtViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bem vindo"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/grey_900"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="João Marcelo"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/grey_900"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/mainIconBuilding2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="0"
-            app:icon="@drawable/gears" />
+            tools:srcCompat="@drawable/gears" />
 
     </LinearLayout>
 
@@ -46,12 +63,20 @@
         android:layout_marginTop="16dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView4"
+        <EditText
+            android:id="@+id/edtTxtSearch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Buscar propriedades"
+            android:padding="8dp"
+            android:background="@drawable/background_edt_txt_search"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/search"
+            />
+
     </LinearLayout>
 
     <LinearLayout
@@ -88,47 +113,4 @@
             app:iconGravity="top" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="439dp"
-        android:orientation="horizontal"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="76dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@drawable/home"
-            app:iconGravity="top" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="?android:attr/actionModeFindDrawable"
-            app:iconGravity="top" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@android:drawable/btn_star"
-            app:iconGravity="top" />
-
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:icon="@android:drawable/ic_menu_myplaces"
-            app:iconGravity="top" />
-
-    </LinearLayout>
 </LinearLayout>

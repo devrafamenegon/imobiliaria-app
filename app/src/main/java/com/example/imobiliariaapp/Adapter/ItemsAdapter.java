@@ -1,6 +1,7 @@
 package com.example.imobiliariaapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,20 +14,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.imobiliariaapp.Domain.ItemsDomain;
 import com.example.imobiliariaapp.R;
+import com.example.imobiliariaapp.activities.DetailActivity;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
-
     ArrayList<ItemsDomain> items;
-    DecimalFormat formatter;
+    NumberFormat formatter;
     Context context;
 
     public ItemsAdapter(ArrayList<ItemsDomain> items) {
         this.items = items;
-        formatter = new DecimalFormat("###,###,###,###,##");
-
+        formatter = NumberFormat.getInstance(new Locale("pt", "BR"));
     }
 
     @NonNull
@@ -43,7 +45,14 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
         holder.addressTxt.setText(items.get(position).getAddress());
         holder.priceTxt.setText("R$" + formatter.format(items.get(position).getPrice()));
 
-        int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getPic(), "drawable", holder.itemView.getContext().getOpPackageName());
+        int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
+        Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.imageView);
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra("propertyValues", items.get(position));
+            context.startActivity(intent);
+        });
     }
 
     @Override

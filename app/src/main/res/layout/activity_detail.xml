@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <ImageView
+                    android:id="@+id/detailImgViewProperty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/cottage" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:background="#70000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/detailImgViewProperty"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/detailImgViewMarker"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/marker" />
+
+                <TextView
+                    android:id="@+id/detailTxtViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Casa com uma linda vista para o mar"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="21sp"
+                    app:layout_constraintStart_toStartOf="@+id/detailImgViewMarker"
+                    app:layout_constraintTop_toTopOf="@+id/view" />
+
+                <TextView
+                    android:id="@+id/detailTxtViewAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Ubatuba, Praia da enseada"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/detailImgViewMarker"
+                    app:layout_constraintStart_toEndOf="@+id/detailImgViewMarker" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/detailTxtViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="R$840.000"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_900"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/detail_top_background"
+                android:orientation="horizontal"
+                android:elevation="3dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3333">
+
+                    <ImageView
+                        android:id="@+id/detailImgViewBedroom"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/bed" />
+
+                    <TextView
+                        android:id="@+id/detailTxtViewBedroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/detailViewDivider1"
+                    android:layout_width="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_400" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3333">
+
+                    <ImageView
+                        android:id="@+id/detailImgViewBathroom"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/shower" />
+
+                    <TextView
+                        android:id="@+id/detailTxtViewBathroom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:text="2"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/detailViewDivider2"
+                    android:layout_width="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_400" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3333">
+
+                    <ImageView
+                        android:id="@+id/detailImgViewWifi"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/wifi" />
+
+                    <TextView
+                        android:id="@+id/detailTxtViewWifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_weight="1"
+                        android:text="5G"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detailTxtViewDescriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Descrição"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/grey_900"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                />
+
+            <TextView
+                android:id="@+id/detailTxtViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/grey_900"
+                android:text="Esta casa de dois andares está localizada em um bairro tranquilo e seguro, a poucos minutos do centro da cidade. Com uma área total de 200 metros quadrados, é uma casa espaçosa, ideal para famílias grandes.
+No primeiro andar, você encontrará uma ampla sala de estar, com espaço suficiente para acomodar uma grande família ou receber amigos. A sala de estar possui grandes janelas que permitem a entrada de luz natural, tornando o ambiente claro e arejado.
+A cozinha fica ao lado da sala de estar, com armários modernos e espaço suficiente para preparar refeições para toda a família. Há também uma área de jantar, perfeita para desfrutar de uma refeição em família.
+No segundo andar, existem quatro quartos, incluindo uma suíte master com banheiro privativo. Todos os quartos são espaçosos, com armários embutidos para armazenamento conveniente. Há também um banheiro adicional no andar de cima.
+O quintal é grande e bem cuidado, com espaço suficiente para as crianças brincarem ou para cultivar um jardim. Há também uma varanda espaçosa, ideal para relaxar e desfrutar da brisa fresca.
+Esta casa vem com uma garagem coberta para dois carros, além de espaço de estacionamento adicional na entrada.
+Não perca a oportunidade de morar nesta bela casa em um bairro tranquilo e amigável. Entre em contato conosco para agendar uma visita." />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/detailBtnNegotiate"
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="32dp"
+                android:background="@drawable/background_btn"
+                android:text="Negociar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

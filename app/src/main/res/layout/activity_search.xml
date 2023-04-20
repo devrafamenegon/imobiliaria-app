@@ -95,7 +95,7 @@
                     android:layout_weight="1"
                     android:text="Apartamentos"
                     app:cornerRadius="15dp"
-                    app:icon="@drawable/apartment"
+                    app:icon="@drawable/apartment2"
                     app:iconGravity="textStart" />
 
             </LinearLayout>

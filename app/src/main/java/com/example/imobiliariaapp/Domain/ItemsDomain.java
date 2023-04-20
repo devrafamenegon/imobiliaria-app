@@ -1,16 +1,18 @@
 package com.example.imobiliariaapp.Domain;
 
-public class ItemsDomain {
+import java.io.Serializable;
+
+public class ItemsDomain implements Serializable {
     private String title;
     private String address;
     private String description;
     private int bed;
     private int bath;
-    private float price;
+    private int price;
     private String pic;
     private boolean wifi;
 
-    public ItemsDomain(String title, String address, String description, int bed, int bath, float price, String pic, boolean wifi) {
+    public ItemsDomain(String title, String address, String description, int bed, int bath, int price, String pic, boolean wifi) {
         this.title = title;
         this.address = address;
         this.description = description;
@@ -61,11 +63,11 @@ public class ItemsDomain {
         this.bath = bath;
     }
 
-    public float getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

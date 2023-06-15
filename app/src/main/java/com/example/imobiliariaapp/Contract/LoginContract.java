@@ -1,6 +1,6 @@
 package com.example.imobiliariaapp.Contract;
 
-public class LoginContract {
+public interface LoginContract {
     interface View {
         void navigateToHomeScreen();
         void navigateToRegisterScreen();
@@ -8,6 +8,7 @@ public class LoginContract {
     }
 
     interface Presenter {
-        void login(String login, String password, String ip);
+        void login(String email, String senha);
+        void saveLogin(String email, String senha);
     }
 }

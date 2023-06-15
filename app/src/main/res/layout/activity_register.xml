@@ -35,7 +35,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Seu nome"
+            android:hint="Nome"
             android:inputType="textPersonName" />
 
         <EditText
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Seu CPF"
+            android:hint="CPF"
             android:inputType="textPersonName" />
 
         <EditText
@@ -60,15 +60,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Seu endereço de email"
+            android:hint="Email"
             android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/signupEtTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Telefone"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/signupEtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Data de nascimento"
+            android:inputType="date" />
 
         <EditText
             android:id="@+id/signupEtPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Sua senha"
+            android:hint="Senha"
             android:inputType="textPassword" />
 
         <EditText
@@ -79,13 +95,6 @@
             android:hint="Confirme sua senha"
             android:inputType="textPassword" />
 
-        <EditText
-            android:id="@+id/signupEtDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Data de nascimento"
-            android:inputType="date" />
     </LinearLayout>
 
     <LinearLayout

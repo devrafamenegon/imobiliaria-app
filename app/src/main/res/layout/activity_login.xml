@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:ems="10"
-            android:hint="Seu endereço de email"
+            android:hint="Email"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:ems="10"
-            android:hint="Sua senha"
+            android:hint="Senha"
             android:inputType="textPassword" />
     </LinearLayout>
 

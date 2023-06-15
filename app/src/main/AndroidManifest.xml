@@ -12,16 +12,16 @@
         android:theme="@style/Theme.ImobiliariaApp"
         tools:targetApi="31">
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".View.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.DetailActivity"
+            android:name=".View.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.HomeActivity"
+            android:name=".View.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.IntroActivity"
+            android:name=".View.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

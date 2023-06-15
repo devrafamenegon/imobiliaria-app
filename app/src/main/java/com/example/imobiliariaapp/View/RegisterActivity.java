@@ -1,4 +1,4 @@
-package com.example.imobiliariaapp.activities;
+package com.example.imobiliariaapp.View;
 
 import android.os.Bundle;
 

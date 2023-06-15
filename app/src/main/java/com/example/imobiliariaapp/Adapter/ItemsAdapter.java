@@ -14,9 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.imobiliariaapp.Domain.ItemsDomain;
 import com.example.imobiliariaapp.R;
-import com.example.imobiliariaapp.activities.DetailActivity;
+import com.example.imobiliariaapp.View.DetailActivity;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Locale;
